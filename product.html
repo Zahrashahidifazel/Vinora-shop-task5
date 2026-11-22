@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جزئیات محصول | وینورا</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo-text.png" alt="سیمین مهر" class="main-logo"></a>
+            </div>
+            <div class="user-actions">
+                <a href="index.html" class="icon-btn">🏠 خانه</a>
+                <button class="icon-btn" id="cart-btn" title="سبد خرید">
+                    🛒 <span class="badge" id="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" id="product-detail">
+    <div class="loading">در حال دریافت اطلاعات محصول...</div>
+    </main>
+
+    <!-- مودال سبد خرید -->
+    <div class="modal-overlay hidden" id="cart-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>سبد خرید شما</h2>
+                <button class="close-btn" data-close="cart-modal">✖</button>
+            </div>
+            <div class="modal-body" id="cart-items"></div>
+            <div class="modal-footer">
+                <p>مبلغ کل: <span id="cart-total">0</span> تومان</p>
+                <button class="btn-primary" id="checkout-btn">ثبت سفارش</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

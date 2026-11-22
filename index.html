@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وینورا | Vinora</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="a4c33f2d-3f43-49b2-b8e4-2641ea7fca31.png" alt="وینورا" class="main-logo">
+                </a>
+            </div>
+            
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="جستجوی محصولات... (مثلاً ساعت، کیف، گوشی)">
+                <button id="search-btn">🔍</button>
+            </div>
+
+    <nav class="nav">
+      <select id="category-filter">
+        <option value="all">همه دسته‌بندی‌ها</option>
+      </select>
+    <select id="sort-select" style="margin-top:8px">
+        <option value="default">مرتب‌سازی: پیش‌فرض</option>
+        <option value="price-asc">ارزان‌ترین</option>
+        <option value="price-desc">گران‌ترین</option>
+        <option value="rating">بیشترین امتیاز</option>
+        <option value="name">نام (الفبا)</option>
+      </select>
+    </nav>
+
+            <div class="user-actions">
+                <button class="icon-btn" id="dashboard-btn" title="داشبورد کاربری">
+                    👤 <span class="badge hidden" id="user-badge">●</span>
+                </button>
+                <button class="icon-btn" id="cart-btn" title="سبد خرید">
+                    🛒 <span class="badge" id="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="loading" class="loading">در حال دریافت اطلاعات از سرور...</div>
+        <div id="error-message" class="error-message hidden"></div>
+        
+        <section id="products-grid" class="products-grid hidden"></section>
+
+        <!-- بخش مجله -->
+        <section class="articles-section">
+            <div class="section-title">
+                <h2>مجله وینورا</h2>
+                <p>تازه‌ترین مقالات درباره محصولات و راهنمای خرید</p>
+            </div>
+            <div class="articles-grid" id="articles-grid"></div>
+        </section>
+
+       
+    <!-- مودال سبد خرید -->
+    <div class="modal-overlay hidden" id="cart-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>سبد خرید شما</h2>
+                <button class="close-btn" data-close="cart-modal">✖</button>
+            </div>
+            <div class="modal-body" id="cart-items"></div>
+            <div class="modal-footer">
+                <p>مبلغ کل: <span id="cart-total">0</span> تومان</p>
+                <button class="btn-primary" id="checkout-btn">ثبت سفارش</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- مودال داشبورد -->
+    <div class="modal-overlay hidden" id="dashboard-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>داشبورد کاربری</h2>
+                <button class="close-btn" data-close="dashboard-modal">✖</button>
+            </div>
+            <div class="modal-body" id="dashboard-content"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
